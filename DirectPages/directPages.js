@@ -25,3 +25,6 @@ exports.GetServiePage = (req, res)=>{
 exports.GetCaseStudies = (req, res)=>{
    res.render('casestudies')
 }
+exports.GetCaseStudyDetail = (req, res)=>{
+   res.render('casestudydetail')
+}

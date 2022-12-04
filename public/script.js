@@ -1,13 +1,15 @@
-
 window.onscroll = function() {myFunction()};
 
 var header = document.getElementById("myHeader");
+var logo = document.getElementById("header-logo");
 var sticky = header.offsetTop;
 
 function myFunction() {
   if (window.pageYOffset > sticky) {
     header.classList.add("sticky");
+    logo.src = './images/sixfiguredark.png'
   } else {
+    logo.src = './images/sixfigurelight.png'
     header.classList.remove("sticky");
   }
 }

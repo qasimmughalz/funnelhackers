@@ -42,8 +42,8 @@ li {
 :root {
   /* --blue: #023047; */
   /* --blue: rgba(46,50,52,1); */
-  --blue: #0d1a2f;
-  --yellow: #3ed1bd;
+  --blue: #000814;
+  --yellow: #C9E265;
   --light-bg: #e9ecef;
   --text-family: 'Inter', sans-serif;
   --heading: 'Oswald', sans-serif;
@@ -171,7 +171,7 @@ li {
 
 
 .lp-header.sticky .logo-wrapper .logo-img {
-  height: 40px;
+  height: 50px;
 }
 
 
@@ -457,14 +457,9 @@ li {
   top: 0;
   left: 0;
   z-index: 1;
-  background: rgb(12, 21, 64);
-  background: radial-gradient(circle, rgba(12, 21, 64, 0.5466561624649859) 10%, rgba(12, 21, 64, 0.700717787114846) 65%, rgba(12, 21, 64, 0.9836309523809523) 94%);
-  /* background: rgb(12,21,64);
-  background: linear-gradient(90deg, rgba(12,21,64,0.8183648459383753) 15%, rgba(12,21,64,0.8379726890756303) 50%, rgba(12,21,64,0.6278886554621849) 94%);
-  */
-  /* background-color: rgba(0, 0, 0, 0.8); */
+  background: rgb(19,19,18);
+  background: linear-gradient(90deg, rgba(19,19,18,1) 4%, rgba(0,0,0,0.37298669467787116) 49%, rgba(7,9,1,1) 97%);
 }
-
 
 
 .about-us-text {
@@ -1264,7 +1259,7 @@ footer#site-footer #footer-logo {
 }
 
 footer#site-footer #footer-logo img {
-  height: 40px;
+  height: 70px;
 }
 
 footer#site-footer ul#footer-top-menu {
@@ -1510,6 +1505,7 @@ footer#site-footer #footer-social-buttons img:hover {
 
 /* ======= Banneer style ======== */
 .process_banner {
+  clip-path: polygon(0 0, 100% 0, 100% 87%, 0% 100%);
   background-image: url('https://mgmtdigital.com/wp-content/uploads/revslider/Homepage/slider-dark-1.jpg');
   background-position: center;
   background-size: cover;
@@ -2078,3 +2074,81 @@ footer#site-footer #footer-social-buttons img:hover {
   }
 }
 
+
+
+/* ========== Case Studies ======= */
+
+.case-study{
+  transition: all .3s ease;
+  position: relative;
+}
+
+.case-study-box{
+ height: 500px;
+}
+.case-study-box img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+
+.case-study-desc{
+  display: none;
+  padding: 30px 30px;
+  gap: 10px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  transform: translateY(0px);
+  transition: all .3s ease;
+  overflow: hidden;
+  transition: all .3s ease;
+}
+
+
+.case-study:hover .case-study-desc{
+  display: block;
+}
+
+.case-study::before{
+  display: block;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  content: '';
+  background-color: rgb(0, 0, 0, 0.1);
+  transition: all .3s ease;
+}
+
+.case-study:hover::before{
+  background-color: rgb(0, 0, 0, 0.7);
+}
+
+.socail-overlay-box-case-study {
+  display: flex;
+  gap: 10px;
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  transform: translateY(0px);
+  transition: all .3s ease;
+}
+
+.case-study:hover .socail-overlay-box-case-study {
+  transform: translateY(-10px);
+}
+
+.socail-overlay-box-case-study .small-circle-case-study {
+  display: flex;
+  background-color: var(--blue);
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+}
+
+.socail-overlay-box-case-study .small-circle-case-study .data{
+  width: 70%;
+  margin: auto;
+
+}

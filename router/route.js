@@ -10,6 +10,7 @@ Router.get('/contactus', getPage.ContactUs)
 Router.get('/portfolio', getPage.Portfolio)
 Router.get('/services', getPage.GetServiePage)
 Router.get('/casestudies', getPage.GetCaseStudies)
+Router.get('/casestudydetail', getPage.GetCaseStudyDetail)
 
 
 Router.get('*', getPage.HomePage)
