@@ -2,7 +2,7 @@ const express = require('express')
 const path =  require('path')
 const Router = require('./router/route')
 const app = express()
-const PORT = 80
+const PORT = 3300
 
 
 app.set('view engine', 'ejs')
