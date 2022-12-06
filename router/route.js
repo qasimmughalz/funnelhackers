@@ -11,6 +11,15 @@ Router.get('/portfolio', getPage.Portfolio)
 Router.get('/services', getPage.GetServiePage)
 Router.get('/casestudies', getPage.GetCaseStudies)
 Router.get('/casestudydetail', getPage.GetCaseStudyDetail)
+Router.get('/success', getPage.GetSuccessPage)
+
+
+
+
+
+
+
+
 
 
 Router.get('*', getPage.HomePage)

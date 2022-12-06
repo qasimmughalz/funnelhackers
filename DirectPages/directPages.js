@@ -28,3 +28,10 @@ exports.GetCaseStudies = (req, res)=>{
 exports.GetCaseStudyDetail = (req, res)=>{
    res.render('casestudydetail')
 }
+
+exports.GetSuccessPage = (req, res)=>{
+   res.render('success', {
+      pageTitle: req.body.name ? req.body.name : '',
+      path:''
+   })
+}

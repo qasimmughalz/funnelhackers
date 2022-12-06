@@ -98,6 +98,7 @@ li {
   border: 2px solid var(--yellow);
 }
 
+
 .form-control:focus,
 .form-control:hover, .form-select:focus , .form-select:hover  {
   box-shadow: none !important;
@@ -121,7 +122,7 @@ li {
 
 .btn-primary {
   padding: 20px 35px;
-  color: #fff;
+  color: var(--blue);
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
   background-color: var(--yellow);
@@ -1220,7 +1221,7 @@ footer#site-footer a {
 }
 
 footer#site-footer a:hover {
-  color: #00c3ce;
+  color: var(--yellow);
 }
 
 footer#site-footer h2 {
@@ -2151,4 +2152,21 @@ footer#site-footer #footer-social-buttons img:hover {
   width: 70%;
   margin: auto;
 
+}
+
+
+/* ============= Success Page ========== */
+
+.success-page{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.success-box{
+  border: 1px solid var(--blue);
+  border-radius: 12px;
+  box-shadow: 0px 0px 5px 1px var(--yellow);
 }
