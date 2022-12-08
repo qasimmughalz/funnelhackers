@@ -43,7 +43,7 @@ Router.post('/formSubmit', (req, res)=>{
     const response = {
 		name:req.body.name,
 		email:req.body.email,
-		phone:req.body.phone,
+		phone:req.body.phone, 
 		website:req.body.website,
 		option:req.body.option,
 		desc:req.body.description
