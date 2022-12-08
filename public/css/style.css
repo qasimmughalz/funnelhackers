@@ -1135,6 +1135,12 @@ li {
   padding: 7px;
    border-radius: 20px 0 20px 20px;
 }
+
+.case-study-item video{
+  min-height: 500px;
+}
+
+
 .case-study-item figure{
   height: 294px;
   position: relative;
@@ -2170,3 +2176,5 @@ footer#site-footer #footer-social-buttons img:hover {
   border-radius: 12px;
   box-shadow: 0px 0px 5px 1px var(--yellow);
 }
+
+/* ============== */

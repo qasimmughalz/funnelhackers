@@ -48,6 +48,7 @@
 
 
 
+
   <div class="custom-container-fluid py-5 w-100 about-us">
     <div class="custom-container p-3 p-md-0">
       <div class="row align-items-end w-100 justify-content-between ">
@@ -200,20 +201,39 @@
       <div class="case-study-wrap ">
         <div class="case-study-heading text-center">
           <div class="col-md-10 m-auto">
-            <h1 class="display-4  text-dark text-center">Don't just listen to us<br> <strong class="fw-bold text-success">See Yourself</strong></h1>
-            <p class="text-dark "> We love to make the internet accessible, inclusive & equitable for each and everone.
-              See how these people are happy and are involvingg inmodern world technologies.
+            <h1 class="display-4  text-dark text-center">Don't just rely on us<br> <strong class="fw-bold text-success">See Yourself</strong></h1>
+            <p class="text-dark "> See how happy they are after getting in touch with us.
             </p>
           </div>
         </div>
-        <!-- <div class="case-study-slider owl-carousel owl-theme my-5" >
+
+        <div class="case-study-slider owl-carousel owl-theme my-5" >
           <div class="case-study-item">
-            <figure>
-              <img src="https://accessibe.com/media/template/featured-testimonials/sarah.jpg" class="p-1" alt="">
-              <div class="overly-brand">
-                  <img src="https://accessibe.com/media/template/featured-testimonials/sarah.jpg" alt="">
+
+            <video width="100%"   controls >
+              <source src="video/web.mp4" type="video/mp4">
+              <source src="video/web.mp4" type="video/ogg">
+            Your browser does not support the video tag.
+            </video>
+
+            <div class="case-study-content">
+              <div class="case-study-content_right pl-md-5 px-2">
+                  <p class="mb-1 text-yellow">EVFUEL</p>
+                  <p>Evfuel is a sweden based electric car charging station business.
+                    We raised their business from hardly meeting their expeneses <span class=" fw-bold">  $5000 - $10,000 </span> to making nearly <span class="text-success fw-bold">  $40,000 - $50,000</span> in time span of <span class=" fw-bold">70 days</span> .
+                   </p>
               </div>
-            </figure>
+            </div>
+          </div>
+
+          <div class="case-study-item">
+
+            <video width="100%"  controls>
+              <source src="video/smm.mp4" type="video/mp4">
+              <source src="video/smm.mp4" type="video/ogg">
+            Your browser does not support the video tag.
+            </video>
+
             <div class="case-study-content">
               <div class="case-study-content_right pl-md-5 px-2">
                   <p class="mb-1 text-yellow">Elinea is happy in listening now.</p>
@@ -222,42 +242,7 @@
             </div>
           </div>
   
-          <div class="case-study-item">
-            <figure>
-              <img src="https://accessibe.com/media/template/featured-testimonials/neil2.jpg" class="p-1" alt="">
-              <div class="overly-brand">
-                  <img src="https://accessibe.com/media/template/featured-testimonials/neil2.jpg" alt="">
-              </div>
-            </figure>
-            <div class="case-study-content">
-              <div class="case-study-content_right">
-                  <p class="mb-1  text-yellow">Ahmad got his visitors news every day.</p>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas voluptatem sequi eveniet a autem culpa maxime veniam corrupti odit eum?</p>
-              </div>
-            </div>
-          </div>
-  
-  
-          <div class="case-study-item">
-            <figure>
-              <img src="https://accessibe.com/media/template/featured-testimonials/amar.jpg" class="p-1" alt="">
-              <div class="overly-brand">
-                  <img src="https://accessibe.com/media/template/featured-testimonials/amar.jpg" alt="">
-              </div>
-            </figure>
-            <div class="case-study-content">
-             
-              <div class="case-study-content_right">
-                  <p class="mb-1  text-yellow">Adi mareting team can perform better than before.</p>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas voluptatem sequi eveniet a autem culpa maxime veniam corrupti odit eum?</p>
-              </div>
-            </div>
-          </div>
-  
-  
-  
-  
-        </div> -->
+        </div>
       </div>
     </section>
   
@@ -383,33 +368,41 @@
       <div class="col-md-5  p-3 p-md-5 mt-md-0 text-center text-white">
         <h1 class="fw-bold heading text-success">Contact Us</h1>
         <p>We are more than happy to help you</p>
-        <form action=""  >
-            <div class="mb-3">
-              <input type="text" class="form-control" placeholder="Name *">
-            </div>
-            <div class="mb-3">
-              <input type="email" class="form-control" placeholder="Email *">
-            </div>
-            <div class="mb-3">
-              <input type="number" class="form-control" placeholder="Phone *">
-            </div>
-            <div class="mb-3">
-              <input type="text" class="form-control" placeholder="Website">
-            </div>
-            <div class="mb-3">
-              <select name="" id="" class="form-select">
-               <option value="" disabled selected>How can we help you?</option>
-               <option value="">Need more visitors, leads and/or sales</option>
-              <option value="">Need to redesign current webstie</option>
-              <option value="">Need to design and build a new website/app</option>
-              <option value="">Need to create branding</option>
-              <option value="">Other</option>
-             </select>
-            </div>
-            <div>
-              <textarea name="" id="" cols="30" rows="3" placeholder="Please, tell us a little about your project"></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary mt-3">Submit</button>
+        <form action="/form" name="contact" method="post" role="form" onsubmit="return validateForm()">
+          <div class="mb-3">
+            <input type="text" class="form-control" placeholder="Name *" name='name' required/>
+          </div>
+          <div class="mb-3">
+            <input type="email" class="form-control" placeholder="Email *" name='email' required/>
+          </div>
+          <div class="mb-3">
+            <input type="number" class="form-control" placeholder="Phone *" name='phone' required/>
+          </div>
+          <div class="mb-3">
+            <input type="text" class="form-control" placeholder="Website" name='website' required/>
+          </div>
+          <div class="mb-3">
+            <select id="" class="form-select" name='option' required>
+              <option value="" disabled selected>How can we help you?</option>
+              <option value="Need Visitors Leads Sales">Need more visitors, leads and/or sales</option>
+              <option value="Redesign Website">Need to redesign current webstie</option>
+              <option value="New Website">
+                Need to design and build a new website/app
+              </option>
+              <option value="Create Branding">Need to create branding</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+          <div> 
+            <textarea
+              name="description"
+              id=""
+              cols="30"
+              rows="3"
+              placeholder="Please, tell us a little about your project" required
+            ></textarea>
+          </div>
+          <button type="submit" value="submit" class="btn btn-primary mt-3">Submit</button>
         </form>
       </div>
     </div>
