@@ -14,7 +14,7 @@ const sendEmail = ( response , req)=>{
     })
 
     let mailOption1 = {
-        from: response.email,
+        from: 'hello@sixfigureshark.com',
         to: 'hello@sixfigureshark.com',
         subject: 'User Testing Query',
         text:  
