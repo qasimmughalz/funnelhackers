@@ -16,27 +16,6 @@ app.set('views', 'views')
 app.use(express.static(path.join(__dirname, 'public')))
 
 
-app.post('/form', (req,res)=>{
-    const data = req.body
-    console.log('=========', data)
-
-    const response = {
-		name:req.body.name,
-		email:req.body.email,
-		phone:req.body.phone,
-		website:req.body.website,
-		option:req.body.option,
-		desc:req.body.description
-    }
-    
-    res.render('success', {
-        Username: req.body.name ? req.body.name : '',
-        path:''
-    })
-
-    res.end();
-})
-
 app.use('/', emailRoute)
 app.use('/', Router)
 

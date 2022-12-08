@@ -1,4 +1,3 @@
-
 const nodemailer = require('nodemailer')
 const express = require('express')
 const Router = express.Router()
@@ -15,8 +14,8 @@ const sendEmail = ( response , req)=>{
     })
 
     let mailOption1 = {
-        from:response.email,
-        to: 'hello@sixfigureshark.com',
+        from:'hello@sixfigureshark.com',
+        to: response.email,
         subject: 'User Testing Query',
         text:  
         "Name: " + response.name + "\n" + "Email: " + response.email + "\n" +
