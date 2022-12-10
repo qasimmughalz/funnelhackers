@@ -237,7 +237,7 @@ li {
 }
 
 .link-items .nav-link:hover {
-  color: #dac1c1;
+  color: var(--yellow);
 }
 
 .lp-header .signup-link {
@@ -851,7 +851,7 @@ li {
 }
 
 .service-item i {
-  color: var(--yellow);
+  color: var(--light-bg);
 }
 
 

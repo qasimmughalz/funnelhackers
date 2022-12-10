@@ -8,18 +8,48 @@
         
   <div class="video-background">
     <video class="video-bg" loop="" muted="" autoplay="" playsinline="" style="opacity:0.5;">
-      <source src="https://kingkong.co/au/wp-content/uploads/sites/3/2021/05/hero-bg-video-2021.mp4" type="video/mp4">
+      <!-- <source src="https://kingkong.co/au/wp-content/uploads/sites/3/2021/05/hero-bg-video-2021.mp4" type="video/mp4"> -->
+      <source src="images/video.mp4" type="video/mp4">
     </video>
     <div class="video-header-content">
       <div class="col-md-9 col-10  mx-auto text-center text-white">
         <h2 class="text-white display-4">Growing Business Online Is Hard.</span> </h2>
         <p class="heading display-3">We make it 3X <br> <span class="display-4 text-success heading"> Simple. Stronger. Smarter. </span>  </p>
         <h1>💸 </h1>
-        <input type="text" class="form-control" placeholder="Enter Website to plan your business growth for next 90 days.">
-        <button class="btn-primary btn mt-4">Let's See Your Growth </button>
+        <input type="text" class="form-control" name="inputwebsite" id="inputwebsite" placeholder="Enter Website to plan your business growth for next 60 days.">
+        <button class="btn-primary btn mt-4" onclick="addwebsiteaddress()" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Let's See Your Growth </button>
     </div>
     </div>
   </div>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="mt-4 text-center justify-content-center">
+        <h4 class="modal-title fw-bold" id="exampleModalLabel">Quick Quote </h4>
+        <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+      </div>
+      <div class="modal-body text-center">
+        <p>Get a Quick Qute on your "How we can help you 6x your figure in next 60days." </p>
+        <form action="/quickquote" method="post">
+        <input type="text" id="topaste" placeholder="enter webite address" class="form-control" name="domain" required>
+        <input type="email" class="form-control my-3" placeholder="Please enter email" name="email" required>
+      </div>
+      <div class="modal-footer text-center justify-content-center">
+        <button type="submit" value="submit" class="btn btn-primary py-2">Send</button>
+      </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+
+
+
 
 
 
@@ -105,66 +135,76 @@
            </div>
             <div class="row justify-content-center text-center">
               <div class="col-lg-3 mb-2">
-                  <div class="service-item rounded p-5 mb-4">
+                  <div class="service-item rounded py-5 px-4 mb-4">
                     <div class="service-item-heading">
-                      <i class="fa fa-2x fa-eye mb-4"></i>
+                      <i class="fa fa-2x fa-globe mb-4"></i>
                       <h4 class="text-uppercase mb-4 fw-bold">Search Engine Optimization</h4>
                     </div>
-                      <p class="m-0">Vero amet vero eos kasd justo ipsum diam sed elitr.</p>
+                      <p class="m-0">Increse your organic visibility by Search engine optimisation (SEO).</p>
                   </div>
               </div>
               
               <div class="col-lg-3 mb-2">
-                  <div class="service-item rounded p-5 mb-4">
+                  <div class="service-item rounded py-5 px-4 mb-4">
                     <div class="service-item-heading">
                       <div class="service-item-heading">
-                      <i class="fa fa-2x  fa-eye mb-4"></i>
+                      <i class="fa fa-instagram fa-2x  mb-4"></i>
                       <h4 class="text-uppercase mb-4 fw-bold">Social Media Marketing</h4>
                       </div>
-                      <p class="m-0">Vero amet vero eos kasd justo ipsum diam sed elitr</p>
+                      <p class="m-0"> Target audience by running effective paid advertising campaigns.</p>
                       </div>
                   </div>
               </div>
+
+              <div class="col-lg-3 mb-2">
+                <div class="service-item rounded py-5 px-4 mb-4">
+                  <div class="service-item-heading">
+                    <i class="fa fa-ad fa-2x mb-4"></i>
+                 
+                    <h4 class="text-uppercase mb-4 fw-bold">Pay Per Click ( PPC )</h4>
+                    </div>
+                    <p class="m-0">Improve your return on investment through data-driven, results-focused PPC management.</p>
+                </div>
+            </div>
+              <div class="col-lg-3 mb-2">
+                <div class="service-item rounded py-5 px-4 mb-4">
+                  <div class="service-item-heading">
+                    <i class="fa fa-2x fa-envelope mb-4"></i>
+                    <h4 class="text-uppercase mb-4 fw-bold">Email Marketing</h4>
+                    </div>
+      
+                    <p class="m-0">Delivers creative email campaigns that engage your audience and grow your business.</p>
+                </div>
+            </div>
             
             <div class="col-lg-3 mb-2">
-                <div class="service-item rounded p-5 mb-4">
+                <div class="service-item rounded py-5 px-4 mb-4">
                   <div class="service-item-heading">
-                  <i class="fa fa-users fa-2x mb-4 fw-bold"></i>
-                 
-                    <h4 class="text-uppercase mb-4 fw-bold">Custom Website Development</h4>
+                  <i class="fa fa-store fa-2x mb-4 fw-bold"></i>
+                    <h4 class="text-uppercase mb-4 fw-bold">Ecommerce Store </h4>
                     </div>
-                    <p class="m-0">Vero amet vero eos kasd justo ipsum diam sed elitr.</p>
+                    <p class="m-0">Start selling online by having a fast growing ecommerce store. </p>
                 </div>
             </div>
             <div class="col-lg-3 mb-2">
-                <div class="service-item rounded p-5 mb-4">
+                <div class="service-item rounded py-5 px-4 mb-4">
                   <div class="service-item-heading">
-                    <i class="fa fa-2x  fa-users mb-4"></i>
-                    <h4 class="text-uppercase mb-4 fw-bold">Custom Web Application</h4>
+                    <i class="fa fa-2x fa-desktop mb-4"></i>
+                    <h4 class="text-uppercase mb-4 fw-bold">Website Development</h4>
                     </div>
-                    <p class="m-0">Vero amet vero eos kasd justo ipsum diam sed elitr</p>
+                    <p class="m-0">Increase your customer reach and trust by having your company website online.</p>
                 </div>
             </div>
             <div class="col-lg-3 mb-2">
-              <div class="service-item rounded p-5 mb-4">
-                <div class="service-item-heading">
-                  <i class="fa fa-users fa-2x mb-4"></i>
-               
-                  <h4 class="text-uppercase mb-4 fw-bold">Pay Per Click ( PPC )</h4>
-                  </div>
-                  <p class="m-0">Vero amet vero eos kasd justo ipsum diam sed elitr.</p>
-              </div>
-          </div>
-            <div class="col-lg-3 mb-2">
-              <div class="service-item rounded p-5 mb-4">
-                <div class="service-item-heading">
-                  <i class="fa fa-2x fa-eye mb-4"></i>
-                  <h4 class="text-uppercase mb-4 fw-bold">Email Marketing</h4>
-                  </div>
-    
-                  <p class="m-0">Vero amet vero eos kasd justo ipsum diam sed elitr.</p>
-              </div>
-          </div>
+                <div class="service-item rounded py-5 px-4 mb-4">
+                  <div class="service-item-heading">
+                    <i class="fa fa-2x  fa-code mb-4"></i>
+                    <h4 class="text-uppercase mb-4 fw-bold">Custom App Development</h4>
+                    </div>
+                    <p class="m-0">Convert your ideas into reality by our experts custom coded applications. </p>
+                </div>
+            </div>
+           
             
         </div>
       </div>
@@ -363,7 +403,8 @@
             <li>Improve conversions</li>
             <li>Reduce cost per acquisition</li>
           </ul>
-          <p class="text-white">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa placeat, hic consequatur velit reprehenderit possimus, tempore quod, quae amet sapiente dolore quidem dolorem magni id sit debitis in molestiae error!</p>
+          <p class="text-white">People are searching for what you have to sell. The problem is that if they don’t find you they can’t buy from you… and that’s costing you money (and a heap of frustration).
+          <br><br>   We’ll help you drive sales for your eCommerce or retail brand by helping the customers who want you, to find you.</p>
       </div>
       <div class="col-md-5  p-3 p-md-5 mt-md-0 text-center text-white">
         <h1 class="fw-bold heading text-success">Contact Us</h1>

@@ -20,7 +20,7 @@ const sendEmail = ( response , req)=>{
         text:  
         "Name: " + response.name + "\n" + "Email: " + response.email + "\n" +
         "Phone: " +response.phone + "\n" +"Website: " + response.website + "\n" + 
-        "option" + response.option + "\n" +"description " + response.description
+        "option" + response.option + "\n" +"description " + response.desc
     };
 
     transporter.sendMail(mailOption1,(err,info)=> {
@@ -30,8 +30,54 @@ const sendEmail = ( response , req)=>{
             console.log('Email Sent: =============' + info.response);
         }
     });
-
 }
+
+
+const QuickEmail = ( response , req)=>{
+    let transporter = nodemailer.createTransport({
+        host: "smtp.titan.email",
+        port: 465,
+        secure: true,
+        auth:{
+            user:'hello@sixfigureshark.com', 
+            pass:'Salesshark1234!'
+        }
+    })
+
+    let mailOption1 = {
+        from: 'hello@sixfigureshark.com',
+        to: 'hello@sixfigureshark.com',
+        subject: 'Quick Report',
+        text:  
+        "Email: " + response.email + "\n" + "Domain: " + response.domain
+    };
+
+    transporter.sendMail(mailOption1,(err,info)=> {
+        if(err){
+            console.log("======error in sending email =========",err);
+        } else {
+            console.log('Email Sent: =============' + info.response);
+        }
+    });
+}
+
+
+Router.post('/quickquote', (req, res)=>{
+    const data = req.body
+    console.log('=========', data)
+    const response = {
+		name:req.body.domain,
+		email:req.body.email,
+    }
+    QuickEmail(response, res)
+    res.render('success', {
+        Username: req.body.email ? req.body.email : '',
+        path:''
+    })
+    res.end();
+})
+
+
 
 
 
